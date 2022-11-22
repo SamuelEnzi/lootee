@@ -27,5 +27,9 @@ module.exports = class DB {
         }
         return results[0];
     }
+
+    async execute(sql, params) {
+        await this.pool.execute(sql, params);
+    }
 }
 

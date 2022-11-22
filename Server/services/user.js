@@ -1,29 +1,39 @@
+const passphrase = require("../components/passphrase");
+const token = require("../components/token");
 const DB = require("../components/db");
 var db = new DB();
-
-async function get(amount = 100) {
-    const rows = await db.fetchAll(
-        'SELECT * from user limit ?',
-        [amount]
-    );
-    const data = rows;
-    return {
-        data
-    };
-}
 
 async function login(username, secret) {
     const user = await db.fetch(
         "select * from user where username = ?",
         [username]
     );
-    if(user == null || user.secret != secret) {
-        return 401;
+    if(user == null){
+        return {
+            status:401,
+            data:undefined
+        }
     }
-    return 200;
+    if(!passphrase.verify(secret, user.secret)) {
+        return {
+            status:401,
+            data:undefined
+        }
+    }
+    
+    var newToken = await token.createToken(user.id, user.secret);
+
+    return {
+        status:200,
+        data:newToken
+    };
+}
+
+async function hash(password){
+    return passphrase.hash(password);
 }
 
 module.exports = {
-    get,
-    login
+    login,
+    hash
 }

@@ -1,9 +1,9 @@
 const config = {
     db : {
-        host:"**",
-        user:"**",
-        password:"**",
-        database:"**",
+        host:"localhost",
+        user:"root",
+        password:"",
+        database:"lootee_db",
         waitForConnections: true,
         connectionLimit: 10,
         queueLimit: 0
