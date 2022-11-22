@@ -20,7 +20,6 @@ router.post("/login", async (req, res, next) => {
         const username = std.require(body.username);
         const secret = std.require(body.secret);
         const response = await user.login(username, secret);
-        console.log(response);
         res.statusCode = response.status;
         if(response.status != 200){
             res.end();
