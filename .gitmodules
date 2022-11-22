@@ -1,0 +1,3 @@
+[submodule "NetApi"]
+	path = NetApi
+	url = https://github.com/SamuelEnzi/NetApi.git

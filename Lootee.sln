@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lootee-Console", "Lootee-Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lootee-Core", "Lootee-Core\Lootee-Core.csproj", "{1F81DAF5-7FB6-4CA5-9FBC-0F04F9B3E579}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiCore", "NetApi\Api\ApiCore\ApiCore.csproj", "{30892267-3DD1-479A-ABB7-FF78BD600222}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1F81DAF5-7FB6-4CA5-9FBC-0F04F9B3E579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F81DAF5-7FB6-4CA5-9FBC-0F04F9B3E579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F81DAF5-7FB6-4CA5-9FBC-0F04F9B3E579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30892267-3DD1-479A-ABB7-FF78BD600222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30892267-3DD1-479A-ABB7-FF78BD600222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30892267-3DD1-479A-ABB7-FF78BD600222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30892267-3DD1-479A-ABB7-FF78BD600222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
