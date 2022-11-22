@@ -1,0 +1,31 @@
+const mysql = require('mysql2/promise');
+const config = require('../config');
+
+module.exports = class DB {
+    constructor(){
+        this.connect();
+    }
+
+    async connect(){
+        this.pool = await mysql.createPool(config.db);
+    }
+
+    //fetches a array from db
+    async fetchAll(sql, params) {
+        const [results, ] = await this.pool.query(sql, params);
+        if(!results) {
+            return null;
+        }
+        return results;
+    }
+
+    //fetches only first result
+    async fetch(sql, params) {
+        const [results, ] = await this.pool.query(sql, params);
+        if(!results || results.length <= 0) {
+            return null;
+        }
+        return results[0];
+    }
+}
+
