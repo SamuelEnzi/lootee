@@ -1,0 +1,45 @@
+-> Accounts
+	-> Username
+	-> SECRET
+	
+-> User
+	-> HP
+	-> XP - Lvl
+		-> Higher level = Better loot
+	-> Money
+	-> Inventory
+		-> Slots + expandable (with items)
+			-> Weapons
+			-> Tools
+			-> Equipables
+				-> Armor
+				-> Storage
+
+
+-> Items (all one time use):
+	-> Name
+	-> Type
+	-> Damage/Heal
+	-> SellVaule
+	-> Rarity
+
+
+-> Actions
+	-> /shop
+		-> buy/sell
+		
+	-> /farm
+		-> user receives random item
+		
+	-> /gamble
+		-> Coinflip
+		-> Slots
+		-> Horse bets
+		
+(
+	-> /auction
+		-> User trades
+	-> /Daily - 24h
+	-> /Weekly - 7d
+)
+
