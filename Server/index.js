@@ -7,7 +7,6 @@ const port = 3000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
 
 //routes
 const user = require("./routes/user");

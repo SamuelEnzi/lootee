@@ -31,5 +31,14 @@ module.exports = class DB {
     async execute(sql, params) {
         await this.pool.execute(sql, params);
     }
+
+    async executeAndFetch(sql, params) {
+        var result = await this.pool.execute(sql, params);
+        try{
+            return result[0].insertId;
+        }catch (err) {
+            return null;
+        }
+    }
 }
 

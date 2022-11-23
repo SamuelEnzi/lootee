@@ -29,11 +29,26 @@ async function login(username, secret) {
     };
 }
 
+async function register(username, secret) {
+    var user = await db.executeAndFetch("INSERT INTO user(username, secret) VALUES ( ? , ? )", [username, secret]);
+    if(user == null) {
+        return {
+            status:500,
+            data:undefined
+        }
+    }
+    return {
+        status:200,
+        data:user
+    }
+}
+
 async function hash(password){
     return passphrase.hash(password);
 }
 
 module.exports = {
     login,
-    hash
+    hash,
+    register
 }
