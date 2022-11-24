@@ -12,8 +12,8 @@ namespace Lootee_Core.Models
     public class User
     {
         public int id { get; set; }
-        public string username { get; set; }
-        public string secret { get; set; }
+        public string? username { get; set; }
+        public string? secret { get; set; }
         public int hp { get; set; }
         public int money { get; set; }
 
@@ -96,6 +96,5 @@ namespace Lootee_Core.Models
                 return null;
             return getResult.result;
         }
-
     }
 }
